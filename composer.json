@@ -1,0 +1,34 @@
+{
+  "name": "sylwesterkowal/plugin.cakephp-delivery-pl",
+  "description": "CakePHP Plugin for Delivery Integrations",
+  "keywords": ["cakephp3","delivery","plugin","GLS","DPD","DHL"],
+  "homepage": "https://github.com/SylwesterKowal/plugin.cakephp-delivery-pl",
+  "type": "cakephp-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sylwester Kowal",
+      "email": "sylwester.kowal@21w.pl"
+    }
+  ],
+  "type": "cakephp-plugin",
+  "require": {
+    "php": ">=5.4.16",
+    "cakephp/cakephp": "~3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Slug\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Slug\\Test\\": "tests",
+      "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+    }
+  },
+  "minimum-stability": "stable"
+}
