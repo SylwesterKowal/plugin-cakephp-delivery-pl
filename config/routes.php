@@ -1,26 +1,15 @@
 <?php
+
+use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 
-Router::scope('/', function ($routes) {
-
-    $routes->plugin('Delivery', function ($routes) {
-        $defaultRouteClass = 'InflectedRoute';
-        if (in_array(Router::defaultRouteClass(), ['DashedRoute'])) {
-            $defaultRouteClass = Router::defaultRouteClass();
-        }
-        $routes->fallbacks($defaultRouteClass);
-    });
-
-
-    $routes->connect('/recive_data/*', ['controller' => 'Recives', 'action' => 'index', 'plugin' => 'Delivery']);
-
-
-    $defaultRouteClass = 'InflectedRoute';
-    if (in_array(Router::defaultRouteClass(), ['DashedRoute'])) {
-        $defaultRouteClass = Router::defaultRouteClass();
+Router::plugin(
+    'Delivery',
+    ['path' => '/delivery'],
+    function (RouteBuilder $routes) {
+        $routes->fallbacks('DashedRoute');
     }
-    $routes->fallbacks($defaultRouteClass);
-});
+);
 
-
+Router::connect('/create/*', ['controller' => 'Recives', 'action' => 'index', 'plugin' => 'Delivery']);
 

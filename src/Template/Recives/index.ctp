@@ -5,5 +5,6 @@
  * Date: 2016-10-05
  * Time: 21:03
  */
-debug($this);
+
+debug($data_order);
 ?>
