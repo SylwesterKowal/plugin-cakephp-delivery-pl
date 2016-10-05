@@ -12,6 +12,9 @@ class RecivesController extends AppController
 {
     public function index()
     {
+        $this->viewBuilder()->layout('ajax');
+        $this->autoRender = false;
+
         $result = parse_url($_SERVER["HTTP_REFERER"]);
         $host = $result['host'];
         $key = md5('45506235512298206672313471444118', true);
