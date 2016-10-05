@@ -12,7 +12,7 @@ class RecivesController extends DeliveryAppController
 {
     public function index()
     {
-        $this->viewBuilder()->layout('ajax');
+        $this->viewBuilder()->layout('Delivery.ajax');
         $this->autoRender = false;
         return 'xxxxxxxxxxxxxxxxxxxxxx';
 //        $result = parse_url($_SERVER["HTTP_REFERER"]);
