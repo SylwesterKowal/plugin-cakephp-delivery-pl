@@ -8,7 +8,7 @@
 
 namespace Delivery\Controller;
 
-class RecivesController extends AppController
+class RecivesController extends DeliveryAppController
 {
     public function index()
     {
