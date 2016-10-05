@@ -21,14 +21,14 @@
   },
   "autoload": {
     "psr-4": {
-      "Slug\\": "src"
+      "Delivery\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Slug\\Test\\": "tests",
+      "Delivery\\Test\\": "tests",
       "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
     }
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "beta"
 }
