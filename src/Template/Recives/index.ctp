@@ -6,6 +6,6 @@
  * Time: 21:03
  */
 
-debug($data_order);
+echo $this->Html->link('Gls', ['controller' => 'gls', 'action' => 'index', 'plugin' => 'Gls']);
 
 ?>

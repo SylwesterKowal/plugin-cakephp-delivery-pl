@@ -12,4 +12,6 @@ Router::plugin(
 );
 
 Router::connect('/create/*', ['controller' => 'Recives', 'action' => 'index', 'plugin' => 'Delivery']);
+Router::connect('/install/*', ['controller' => 'Install', 'action' => 'index', 'plugin' => 'Delivery']);
+Router::connect('/register/*', ['controller' => 'Register', 'action' => 'index', 'plugin' => 'Delivery']);
 
