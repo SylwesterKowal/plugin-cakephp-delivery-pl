@@ -14,8 +14,8 @@ class RecivesController extends DeliveryAppController
     public function initialize()
     {
         parent::initialize();
-//        $this->loadComponent('RequestHandler');
-        $this->loadComponent('Delivery.Mcrypt');
+        $this->loadComponent('RequestHandler');
+        $this->loadComponent('Mcrypt');
     }
 
     public function index()
@@ -30,7 +30,8 @@ class RecivesController extends DeliveryAppController
                 #TODO Przygotować wybór kurierów
                 if ($this->getRefererHost() == $data_order['HO']) {
 
-                    $this->request->session('Recives.data', $data_order);
+                    $this->request->session()->write('Recives.data', $data_order);
+                    $this->request->session()->write('Recives.CryptData', $this->request->query['data']);
 
                 } else {
                     $this->Flash->error(__('Register in delivery.21order.com'));
