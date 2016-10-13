@@ -6,6 +6,6 @@
  * Time: 21:03
  */
 
-echo $this->Html->link('Gls', ['controller' => 'gls', 'action' => 'index', 'plugin' => 'Gls']);
+echo $this->Html->link('GLS', ['controller' => 'gls', 'action' => 'index', 'plugin' => 'Gls']);
 
 ?>
